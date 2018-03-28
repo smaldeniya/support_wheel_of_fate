@@ -7,6 +7,7 @@ This code sample has a an implementation of support wheel of fate with following
 
 
  - Maven has used as the build too.
+ - To run this locally you need to update mongo url in "src/main/resources/default.config.properties"
  - This implementation store Engineer details and Schedule for a day in MongoDB collections called 'engineer' and 'day_schedule'
  - DB feature has been implemented using repository design pattern and queries has implemented as specifications.
  - This implementation consist of AWS lambda handler function, so once the jar is built, you can upload it to AWS Lambda and configure it to a REST API using API manager.
@@ -23,3 +24,5 @@ This code sample has a an implementation of support wheel of fate with following
   "date": "2018-03-28T17:32:30.183Z"
 }'
 - This code has 100% test coverage using jUnit
+- Once the jar is build run below code to populate set of 10 test Engineers to the DB
+> mvn test -Dtest=com.astro.prod.PopulateTestData
